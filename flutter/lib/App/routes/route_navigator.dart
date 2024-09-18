@@ -8,6 +8,8 @@ import 'package:school/App/screens/home_screen/view/onboarding.dart';
 import 'package:school/App/screens/splash_screen/view/splash_screen.dart';
 import 'package:school/App/screens/clander/view/clander.dart';
 import 'package:school/App/screens/clander/bloc/clander_bloc.dart';
+import 'package:school/App/screens/grade/view/grade.dart';
+import 'package:school/App/screens/grade/bloc/grade_bloc.dart';
 
 abstract class RouteNavigator {
   static final Map<String, Widget Function(BuildContext)> routes = {
@@ -21,8 +23,12 @@ abstract class RouteNavigator {
           child: const HomeScreen(),
         ),
     Routes.clander: (BuildContext context) => BlocProvider(
-          create: (context) => ClanderBloc(),
-          child: const Clander(),
+          create: (context) => CalendarBloc(),
+          child: CalendarScreen(),
+        ),
+    Routes.grade: (BuildContext context) => BlocProvider(
+          create: (context) => GradeBloc(),
+          child: const Grade(),
         )
   };
 }

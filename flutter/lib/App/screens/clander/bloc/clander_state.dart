@@ -1,11 +1,12 @@
 part of 'clander_bloc.dart';
 
-class ClanderState {
-  ClanderState({this.currentState = ActivityState.loading});
+abstract class CalendarState {}
 
-  ActivityState currentState;
+class CalendarLoading extends CalendarState {}
 
-  ClanderState copy() {
-    return ClanderState(currentState: currentState);
-  }
+class CalendarLoaded extends CalendarState {
+  final DateTime selectedDate;
+  final Map<DateTime, List<ClassEvent>> events;
+
+  CalendarLoaded(  this.selectedDate, this.events);
 }
