@@ -16,24 +16,24 @@ interface Grade {
   styleUrl: './grades.component.css'
 })
 export class GradesComponent implements OnInit {
-  studentName: string = 'John Doe';
+  studentName: string = 'Sidi Ali';
   studentId: string = '12345';
-  semester: string = 'Fall 2023';
+  semester: string = 'Simestre 2023';
   grades: Grade[] = [
-    { subject: 'Mathematics', grade: 'A', credits: 4 },
-    { subject: 'English Literature', grade: 'B+', credits: 3 },
-    { subject: 'Physics', grade: 'A-', credits: 4 },
-    { subject: 'History', grade: 'B', credits: 3 },
-    { subject: 'Computer Science', grade: 'A+', credits: 4 }
+    { subject: 'Math', grade: '16', credits: 4 },
+    { subject: 'English', grade: '17', credits: 3 },
+    { subject: 'Physics', grade: '8', credits: 4 },
+    { subject: 'History/Geography', grade: '20', credits: 3 },
+    { subject: 'Computer Science', grade: '20', credits: 4 }
   ];
 
   gpa: number = 0;
 
   ngOnInit() {
-    this.calculateGPA();
+    this.calculateTotal();
   }
 
-  calculateGPA() {
+  calculateTotal() {
     const gradePoints = {
       'A+': 4.0, 'A': 4.0, 'A-': 3.7,
       'B+': 3.3, 'B': 3.0, 'B-': 2.7,
@@ -45,7 +45,7 @@ export class GradesComponent implements OnInit {
     let totalCredits = 0;
 
     this.grades.forEach(grade => {
-      totalPoints += gradePoints[grade.grade as keyof typeof gradePoints] * grade.credits;
+      totalPoints += parseInt( grade.grade)  * grade.credits;
       totalCredits += grade.credits;
     });
 

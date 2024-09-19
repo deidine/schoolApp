@@ -27,6 +27,5 @@ export class HomeComponent {
 
   onSubmit(form: any) {
     console.log('Form submitted', form);
-    // Handle form submission
   }
 }

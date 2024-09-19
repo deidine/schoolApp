@@ -20,11 +20,11 @@ export class CalanderComponent {
 
    currentMonth: Date = new Date();
   events: CalendarEvent[] = [
-    { date: new Date(2023, 8, 5), title: 'First Day of Classes', description: 'Fall semester begins', type: 'academic' },
-    { date: new Date(2023, 8, 15), title: 'Club Fair', description: 'Join student organizations', type: 'extracurricular' },
-    { date: new Date(2023, 9, 10), title: 'Midterm Exams Begin', description: 'Prepare for your exams', type: 'academic' },
-    { date: new Date(2023, 10, 11), title: 'Veterans Day', description: 'No classes', type: 'holiday' },
-    { date: new Date(2023, 10, 23), title: 'Thanksgiving Break', description: 'No classes', type: 'holiday' },
+    { date: new Date(2024, 8, 5), title: 'First Day of Classes', description: 'Fall semester begins', type: 'academic' },
+    { date: new Date(2024, 8, 15), title: 'Club Fair', description: 'Join student organizations', type: 'extracurricular' },
+    { date: new Date(2024, 9, 10), title: 'Midterm Exams Begin', description: 'Prepare for your exams', type: 'academic' },
+    { date: new Date(2024, 10, 11), title: 'Veterans Day', description: 'No classes', type: 'holiday' },
+    { date: new Date(2024, 10, 23), title: 'Thanksgiving Break', description: 'No classes', type: 'holiday' },
   ];
 
   weeks: Date[][] = [];
