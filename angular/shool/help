@@ -1,0 +1,3 @@
+ng generate component grades
+ng generate service grades
+ng generate module grades
