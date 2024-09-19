@@ -1,1 +1,84 @@
-<p>home works!</p>
+
+<main>
+    <section class="hero bg-light py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1 class="display-4">Take <span class="text-primary">student experience</span> to the next level</h1>
+            <p class="lead">Lorem ipsum is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy.</p>
+            <button class="btn btn-primary btn-lg">JOIN NOW</button>
+          </div>
+          <div class="col-md-6">
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msOZa.img" alt="Students studying" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="success-stats py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Success</h2>
+        <div class="row text-center">
+          <div class="col" *ngFor="let stat of successStats">
+            <i class="bi {{ stat.icon }} fs-1 text-primary mb-3"></i>
+            <h3 class="fs-2">{{ stat.value }}</h3>
+            <p>{{ stat.label }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="how-it-works py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">How it works</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div *ngFor="let step of howItWorks" class="mb-4">
+                  <h5>{{ step.title }}</h5>
+                  <p>{{ step.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msOZa.img" alt="Students collaborating" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="contact-form py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msOZa.img" alt="Students in classroom" class="img-fluid rounded">
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Need Support</h3>
+                <p class="card-text">Contact Professionals For Guidance</p>
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" ngModel name="name" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email Address" ngModel name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="Phone" ngModel name="phone">
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="3" placeholder="Your Query" ngModel name="query" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100" [disabled]="!contactForm.form.valid">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
