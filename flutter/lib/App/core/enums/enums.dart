@@ -1,1 +1,0 @@
-enum ActivityState { initial, loading, loaded, empty, error }
